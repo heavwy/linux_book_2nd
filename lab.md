@@ -192,7 +192,7 @@ brightness      device          max_brightness  power           subsystem       
 ```
 	UIO {
 		compatible = "arrow,UIO";
-		reg = <0x50002000 0x400>;
+		reg = <0x50002000 0x1000>;
 		clocks = <&rcc GPIOA>;		
 	};
 ```
@@ -217,5 +217,17 @@ cp /mnt/lab/chapter5/lab5_4/* ~/lab/chapter5/lab5_4/
 
 ```
 cat /proc/kallsyms | grep uio
+```
+
+
+
+编译
+
+```
+mkdir ~/nfs_rootfs/lab/chapter5/lab5_4/
+cp lab5_4.ko lab5_4_test ~/nfs_rootfs/lab/chapter5/lab5_4/
+
+mkdir ~/lab/chapter5/lab5_4
+cp /mnt/lab/chapter5/lab5_4/* ~/lab/chapter5/lab5_4/
 ```
 

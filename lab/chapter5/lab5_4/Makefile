@@ -11,11 +11,11 @@ KERN_DIR = /home/book/100ask_stm32mp157_pro-sdk/Linux-5.4 # 板子所用内核�
 
 all:
 	make -C $(KERN_DIR) M=`pwd` modules 
-#    $(CROSS_COMPILE)gcc -o lab5_2_test lab5_2_test.c 
+	$(CROSS_COMPILE)gcc -o lab5_4_test lab5_4_test.c
 
 clean:
 	make -C $(KERN_DIR) M=`pwd` modules clean
-#    rm -rf modules.order
+	rm -rf modules.order
 
 
 # 参考内核源码drivers/char/ipmi/Makefile
