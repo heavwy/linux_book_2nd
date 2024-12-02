@@ -54,7 +54,7 @@ void configure_device(void)
 
 
 
-## scanf("%[\^\n]%*c", sendstring)
+## scanf("%\[^\n\]%*c", sendstring)
 
 1. `scanf` 函数概述 
 
